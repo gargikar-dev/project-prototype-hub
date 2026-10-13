@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full antialiased">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate Lead Matcher — AI Automation Studio</title>
+  <meta name="description" content="Finds high-value properties and instantly matches them with pre-approved buyers who have the budget ready to close." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#FAFAFA',
+            surface: '#FFFFFF',
+            borderline: '#E5E5E5',
+            ink: '#171717',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: #FAFAFA;
+      color: #171717;
+    }
+
+    .smooth-transition {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
+</head>
+<body class="min-h-full flex flex-col justify-between selection:bg-[#171717] selection:text-white">
+
+  <!-- 1. TOP BAR -->
+  <header class="border-b border-[#E5E5E5] bg-[#FFFFFF] sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="../index.html" class="inline-flex items-center gap-2 text-sm font-semibold text-[#171717] hover:opacity-70 transition-opacity">
+        <span aria-hidden="true">←</span>
+        <span>Back to Hub</span>
+      </a>
+
+      <!-- Status Pill -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#FAFAFA] border border-[#E5E5E5] text-[#171717]">
+        <span class="w-2 h-2 rounded-full bg-[#171717] animate-pulse"></span>
+        <span>[ Deal Sourcing &amp; Lead Pipeline Active ]</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="max-w-6xl mx-auto px-6 py-12 flex-1 w-full space-y-16">
+
+    <!-- 2. HEADER SECTION -->
+    <section class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-[#FFFFFF] border border-[#E5E5E5] text-neutral-500 mb-3">
+        HIGH-TICKET PROPERTY &amp; CAPITAL MATCHER
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#171717] leading-tight">
+        Real Estate Lead Matcher
+      </h1>
+      <p class="text-neutral-500 text-base sm:text-lg mt-4 leading-relaxed">
+        Finds high-value properties and instantly matches them with pre-approved buyers who have the budget ready to close.
+      </p>
+    </section>
+
+    <!-- 3. VISUAL DOODLE FLOWCHART (3-Step Flex Layout) -->
+    <section class="bg-[#FFFFFF] border border-[#E5E5E5] rounded-2xl p-6 sm:p-8 shadow-sm">
+      <div class="flex items-center justify-between border-b border-[#E5E5E5] pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Automated Pipeline</span>
+          <h2 class="text-base sm:text-lg font-bold text-[#171717]">From Property Signal To Closed Escrow</h2>
+        </div>
+        <span class="text-xs font-mono text-neutral-400 hidden sm:inline-block">Real-time Matching</span>
+      </div>
+
+      <!-- 3-Step Horizontal Flex Container -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-6 bg-white rounded-xl border border-neutral-200">
+
+        <!-- Node 1: Collects Listings -->
+        <div class="w-full md:w-56 bg-white border border-neutral-200 rounded-xl p-4 flex flex-col items-center text-center shadow-xs">
+          <!-- Doodle SVG Container -->
+          <div class="w-16 h-16 rounded-lg bg-[#FAFAFA] border border-neutral-200 flex items-center justify-center mb-3">
+            <svg class="w-10 h-10" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Collects Listings">
+              <!-- House body -->
+              <path d="M18 32 L32 18 L46 32 V48 H18 Z" fill="#FFFFFF" stroke="#171717" stroke-width="2" stroke-linejoin="round"/>
+              <!-- Chimney with gentle puff -->
+              <path d="M38 23 V17 H43 V28" stroke="#171717" stroke-width="1.8" fill="#FFFFFF"/>
+              <path d="M41 13 C39 11 43 9 45 10 C47 11 48 8 46 6" stroke="#171717" stroke-width="1.5" stroke-dasharray="2 2"/>
+              <!-- Roof overhang line -->
+              <path d="M14 34 L32 16 L50 34" stroke="#171717" stroke-width="2.2" stroke-linecap="round"/>
+              <!-- Door & Window -->
+              <rect x="28" y="38" width="8" height="10" rx="1.5" fill="#FAFAFA" stroke="#171717" stroke-width="1.6"/>
+              <circle cx="34" cy="43" r="0.8" fill="#171717"/>
+              <rect x="22" y="34" width="5" height="5" rx="1" stroke="#171717" stroke-width="1.4"/>
+            </svg>
+          </div>
+          <span class="text-[10px] font-bold tracking-wider uppercase text-neutral-400 mb-1">STEP 01</span>
+          <h3 class="text-sm font-bold text-[#171717] mb-1.5">1. Collects Listings</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Scrapes registries and off-market property alerts.</p>
+        </div>
+
+        <!-- Arrow 1 (Connector between Node 1 & 2) -->
+        <div class="flex md:flex-col items-center justify-center py-2 md:py-0 text-neutral-400">
+          <div class="hidden md:flex items-center gap-1 px-1">
+            <div class="w-8 sm:w-12 h-0.5 border-t-2 border-dashed border-neutral-300 relative flex items-center justify-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#171717] absolute animate-pulse"></span>
+            </div>
+            <svg class="w-4 h-4 text-[#171717]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+          <div class="flex md:hidden items-center justify-center py-1">
+            <svg class="w-4 h-4 text-[#171717]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Node 2: Verifies Buyer Budget -->
+        <div class="w-full md:w-56 bg-white border border-neutral-200 rounded-xl p-4 flex flex-col items-center text-center shadow-xs">
+          <!-- Doodle SVG Container -->
+          <div class="w-16 h-16 rounded-lg bg-[#FAFAFA] border border-neutral-200 flex items-center justify-center mb-3">
+            <svg class="w-10 h-10" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Verifies Buyer Budget">
+              <!-- Clipboard backing -->
+              <rect x="18" y="16" width="28" height="36" rx="4" fill="#FFFFFF" stroke="#171717" stroke-width="2"/>
+              <!-- Clip at top -->
+              <rect x="26" y="12" width="12" height="6" rx="2" fill="#FFFFFF" stroke="#171717" stroke-width="1.8"/>
+              <!-- Checkmarks -->
+              <path d="M23 26 L25 28 L29 24" stroke="#171717" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="32" y1="26" x2="40" y2="26" stroke="#171717" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M23 33 L25 35 L29 31" stroke="#171717" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="32" y1="33" x2="40" y2="33" stroke="#171717" stroke-width="1.4" stroke-linecap="round"/>
+              <!-- Dollar coin -->
+              <circle cx="38" cy="42" r="8" fill="#FAFAFA" stroke="#171717" stroke-width="1.8"/>
+              <text x="38" y="46" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="10" fill="#171717">$</text>
+            </svg>
+          </div>
+          <span class="text-[10px] font-bold tracking-wider uppercase text-neutral-400 mb-1">STEP 02</span>
+          <h3 class="text-sm font-bold text-[#171717] mb-1.5">2. Verifies Buyer Budget</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Confirms pre-approval, liquidity, and timeframe.</p>
+        </div>
+
+        <!-- Arrow 2 (Connector between Node 2 & 3) -->
+        <div class="flex md:flex-col items-center justify-center py-2 md:py-0 text-neutral-400">
+          <div class="hidden md:flex items-center gap-1 px-1">
+            <div class="w-8 sm:w-12 h-0.5 border-t-2 border-dashed border-neutral-300 relative flex items-center justify-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#171717] absolute animate-pulse"></span>
+            </div>
+            <svg class="w-4 h-4 text-[#171717]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+          <div class="flex md:hidden items-center justify-center py-1">
+            <svg class="w-4 h-4 text-[#171717]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Node 3: Pairs Buyer & Property -->
+        <div class="w-full md:w-56 bg-white border border-neutral-200 rounded-xl p-4 flex flex-col items-center text-center shadow-xs">
+          <!-- Doodle SVG Container -->
+          <div class="w-16 h-16 rounded-lg bg-[#FAFAFA] border border-neutral-200 flex items-center justify-center mb-3">
+            <svg class="w-10 h-10" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Pairs Buyer & Property">
+              <!-- Circular badge -->
+              <circle cx="32" cy="32" r="20" fill="#FFFFFF" stroke="#171717" stroke-width="2"/>
+              <!-- Handshake doodle inside badge -->
+              <path d="M22 30 L28 35 L33 31" stroke="#171717" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M42 30 L36 35 L31 31" stroke="#171717" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="29" y="32" width="6" height="5" rx="1" fill="#171717"/>
+              <!-- Cufflines -->
+              <line x1="20" y1="28" x2="22" y2="33" stroke="#171717" stroke-width="1.6"/>
+              <line x1="44" y1="28" x2="42" y2="33" stroke="#171717" stroke-width="1.6"/>
+              <!-- Star burst overhead -->
+              <path d="M32 18 L33 20 L35 21 L33 22 L32 24 L31 22 L29 21 L31 20 Z" fill="#171717"/>
+            </svg>
+          </div>
+          <span class="text-[10px] font-bold tracking-wider uppercase text-neutral-400 mb-1">STEP 03</span>
+          <h3 class="text-sm font-bold text-[#171717] mb-1.5">3. Pairs Buyer &amp; Property</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Generates warm outreach copy and dossier data.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. PLAIN-ENGLISH EXPLANATION (3 columns) -->
+    <section>
+      <div class="mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Core Architecture</span>
+        <h2 class="text-xl font-bold text-[#171717] mt-0.5">High-Value Deal Pipeline Mechanics</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Card 1: Market Scanning -->
+        <div class="bg-[#FFFFFF] border border-[#E5E5E5] rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-[#171717] transition-colors">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#FAFAFA] border border-[#E5E5E5] flex items-center justify-center font-bold text-sm text-[#171717] mb-4">
+              01
+            </div>
+            <h3 class="text-lg font-bold text-[#171717] mb-2">Market Scanning</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed">
+              Continuously monitors public registries and off-market opportunities for prime listings.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#E5E5E5] flex items-center text-xs font-mono text-neutral-400">
+            <span>MLS • Public tax tax rolls • Probate listings</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Financial Qualification -->
+        <div class="bg-[#FFFFFF] border border-[#E5E5E5] rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-[#171717] transition-colors">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#FAFAFA] border border-[#E5E5E5] flex items-center justify-center font-bold text-sm text-[#171717] mb-4">
+              02
+            </div>
+            <h3 class="text-lg font-bold text-[#171717] mb-2">Financial Qualification</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed">
+              Checks buyer funding readiness, timelines, and pre-approval status.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#E5E5E5] flex items-center text-xs font-mono text-neutral-400">
+            <span>Proof of funds • 1031 Exchange windows</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Automated Dossier -->
+        <div class="bg-[#FFFFFF] border border-[#E5E5E5] rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-[#171717] transition-colors">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#FAFAFA] border border-[#E5E5E5] flex items-center justify-center font-bold text-sm text-[#171717] mb-4">
+              03
+            </div>
+            <h3 class="text-lg font-bold text-[#171717] mb-2">Automated Dossier</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed">
+              Packages matched buyers and properties into a structured spreadsheet for outreach.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#E5E5E5] flex items-center text-xs font-mono text-neutral-400">
+            <span>Clean CRM export • 1-click message draft</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. INTERACTIVE TEST DRIVE (No Code) -->
+    <section class="bg-[#FFFFFF] border border-[#E5E5E5] rounded-2xl p-6 sm:p-8 shadow-sm">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+        <div class="max-w-xl">
+          <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Interactive Test Drive</span>
+          <h2 class="text-2xl font-bold text-[#171717] mt-0.5">Explore High-Intent Match Records</h2>
+          <p class="text-neutral-500 text-sm mt-1.5 leading-relaxed">
+            Select an asset class below to view two verified live pairings with buyer purchasing capacity, timeline, and intro drafts.
+          </p>
+        </div>
+
+        <!-- Export Spreadsheet Button -->
+        <button 
+          id="btn-export-sheet"
+          onclick="simulateSheetExport()"
+          class="px-5 py-2.5 rounded-xl border border-[#171717] bg-white text-[#171717] hover:bg-neutral-100 font-semibold text-xs transition-colors flex items-center gap-2 whitespace-nowrap shadow-xs self-start sm:self-auto"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span id="export-sheet-text">Export Sample Spreadsheet (.xlsx)</span>
+        </button>
+      </div>
+
+      <!-- 3 Scenario Selector Buttons -->
+      <div class="flex flex-wrap gap-2.5 mb-8">
+        <button 
+          id="btn-asset-luxury" 
+          onclick="selectAsset('luxury')"
+          class="asset-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#171717] text-white border-[#171717]"
+        >
+          1. Luxury Waterfront Homes
+        </button>
+
+        <button 
+          id="btn-asset-commercial" 
+          onclick="selectAsset('commercial')"
+          class="asset-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#FFFFFF] text-[#171717] border-[#E5E5E5] hover:border-[#171717]"
+        >
+          2. Commercial Office Spaces
+        </button>
+
+        <button 
+          id="btn-asset-multifamily" 
+          onclick="selectAsset('multifamily')"
+          class="asset-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#FFFFFF] text-[#171717] border-[#E5E5E5] hover:border-[#171717]"
+        >
+          3. Multi-Family Investment Units
+        </button>
+      </div>
+
+      <!-- 2 PROPERTY MATCH CARDS GRID -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        <!-- MATCH CARD 1 -->
+        <div class="bg-[#FAFAFA] border border-[#E5E5E5] rounded-xl p-6 flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
+            <!-- Card Header: Address & Valuation -->
+            <div class="flex items-start justify-between pb-3 border-b border-[#E5E5E5]">
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 block mb-0.5">Matched Listing // Primary Opportunity</span>
+                <h4 id="card1-address" class="text-base font-bold text-[#171717]">428 Ocean Vista Way, Newport Beach, CA</h4>
+                <p id="card1-specs" class="text-xs text-neutral-500 mt-0.5">5 Beds • 6 Baths • 6,400 sqft • Private Deepwater Dock</p>
+              </div>
+              <div class="text-right">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 block">Valuation</span>
+                <span id="card1-price" class="text-base font-extrabold text-[#171717]">$6,850,000</span>
+              </div>
+            </div>
+
+            <!-- Verified Buyer Details -->
+            <div class="bg-white border border-[#E5E5E5] rounded-lg p-4 space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-[#171717]" id="card1-buyer-name">Arthur &amp; Vivian Vance</span>
+                <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200">
+                  ✓ Verified Liquid Funds
+                </span>
+              </div>
+              <div class="text-xs text-neutral-600 space-y-1">
+                <div><span class="text-neutral-400">Purchasing Capacity:</span> <strong class="text-[#171717]" id="card1-buyer-cap">$7,500,000 Cash Reserves (J.P. Morgan Verified)</strong></div>
+                <div><span class="text-neutral-400">Closing Timeline:</span> <span class="font-medium text-[#171717]" id="card1-buyer-time">Immediate 14-day close (No loan contingency)</span></div>
+              </div>
+            </div>
+
+            <!-- Intro Message Draft -->
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 block mb-1">Personalized Outreach Draft</span>
+              <p id="card1-message" class="text-xs text-neutral-600 leading-relaxed bg-white border border-[#E5E5E5] rounded-lg p-3.5">
+                "Hi Arthur, knowing your search criteria for a turnkey waterfront estate with deepwater docking in Newport Beach, an off-market opportunity just opened at 428 Ocean Vista Way ($6.85M). The seller is an private equity partner seeking a discreet, quick transaction before month-end. Would you like a confidential walk-through video today?"
+              </p>
+            </div>
+          </div>
+
+          <button 
+            id="copy-card1-btn" 
+            onclick="copyMessageText('card1-message', 'copy-card1-btn-text')"
+            class="w-full py-2.5 px-4 rounded-lg border border-[#E5E5E5] bg-white hover:bg-neutral-100 text-xs font-semibold text-[#171717] transition-colors flex items-center justify-center gap-1.5"
+          >
+            <span id="copy-card1-btn-text">Copy Outreach Draft</span>
+          </button>
+        </div>
+
+        <!-- MATCH CARD 2 -->
+        <div class="bg-[#FAFAFA] border border-[#E5E5E5] rounded-xl p-6 flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
+            <!-- Card Header: Address & Valuation -->
+            <div class="flex items-start justify-between pb-3 border-b border-[#E5E5E5]">
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 block mb-0.5">Matched Listing // Secondary Opportunity</span>
+                <h4 id="card2-address" class="text-base font-bold text-[#171717]">1102 Pelican Point Drive, Sarasota, FL</h4>
+                <p id="card2-specs" class="text-xs text-neutral-500 mt-0.5">4 Beds • 5 Baths • 5,100 sqft • Private Beach Access &amp; Infinity Pool</p>
+              </div>
+              <div class="text-right">
+                <span class="text-[10px] font-bold uppercase tracking-wider text-neutral-400 block">Valuation</span>
+                <span id="card2-price" class="text-base font-extrabold text-[#171717]">$4,200,000</span>
+              </div>
+            </div>
+
+            <!-- Verified Buyer Details -->
+            <div class="bg-white border border-[#E5E5E5] rounded-lg p-4 space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-[#171717]" id="card2-buyer-name">Dr. Marcus Thorne</span>
+                <span class="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200">
+                  ✓ Verified Liquid Funds
+                </span>
+              </div>
+              <div class="text-xs text-neutral-600 space-y-1">
+                <div><span class="text-neutral-400">Purchasing Capacity:</span> <strong class="text-[#171717]" id="card2-buyer-cap">$4,500,000 Proof of Funds (First Republic / Chase)</strong></div>
+                <div><span class="text-neutral-400">Closing Timeline:</span> <span class="font-medium text-[#171717]" id="card2-buyer-time">21-day timeline (Relocating Q4)</span></div>
+              </div>
+            </div>
+
+            <!-- Intro Message Draft -->
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 block mb-1">Personalized Outreach Draft</span>
+              <p id="card2-message" class="text-xs text-neutral-600 leading-relaxed bg-white border border-[#E5E5E5] rounded-lg p-3.5">
+                "Hello Dr. Thorne, a private coastal listing matching your exact specifications for gulf-front access with zero HOA restrictions has surfaced at 1102 Pelican Point Drive ($4.2M). The sellers are motivated to complete escrow within 30 days. Let me know if you would like the architectural dossier and survey!"
+              </p>
+            </div>
+          </div>
+
+          <button 
+            id="copy-card2-btn" 
+            onclick="copyMessageText('card2-message', 'copy-card2-btn-text')"
+            class="w-full py-2.5 px-4 rounded-lg border border-[#E5E5E5] bg-white hover:bg-neutral-100 text-xs font-semibold text-[#171717] transition-colors flex items-center justify-center gap-1.5"
+          >
+            <span id="copy-card2-btn-text">Copy Outreach Draft</span>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast" class="fixed bottom-6 right-6 bg-[#171717] text-white px-5 py-3 rounded-xl shadow-xl text-xs font-semibold flex items-center gap-2 transition-all transform translate-y-16 opacity-0 pointer-events-none z-50">
+    <span>✓</span>
+    <span id="toast-text">Spreadsheet dossier generated &amp; downloaded!</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-[#E5E5E5] bg-[#FFFFFF] py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-[#171717]">Real Estate Lead Matcher</span>
+        <span>•</span>
+        <span>AI Automation Studio</span>
+      </div>
+      <div>
+        <span>Minimal Black &amp; White Architecture</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT FOR DYNAMIC DATA AND SPREADSHEET EXPORT -->
+  <script>
+    const assetScenarios = {
+      luxury: {
+        card1: {
+          address: "428 Ocean Vista Way, Newport Beach, CA",
+          specs: "5 Beds • 6 Baths • 6,400 sqft • Private Deepwater Dock",
+          price: "$6,850,000",
+          buyerName: "Arthur & Vivian Vance (Family Office)",
+          buyerCap: "$7,500,000 Cash Reserves (J.P. Morgan Verified)",
+          buyerTime: "Immediate 14-day close (No loan contingency)",
+          message: '"Hi Arthur, knowing your search criteria for a turnkey waterfront estate with deepwater docking in Newport Beach, an off-market opportunity just opened at 428 Ocean Vista Way ($6.85M). The seller is an private equity partner seeking a discreet, quick transaction before month-end. Would you like a confidential walk-through video today?"'
+        },
+        card2: {
+          address: "1102 Pelican Point Drive, Sarasota, FL",
+          specs: "4 Beds • 5 Baths • 5,100 sqft • Private Beach Access & Infinity Pool",
+          price: "$4,200,000",
+          buyerName: "Dr. Marcus Thorne (Surgical Director)",
+          buyerCap: "$4,500,000 Proof of Funds (First Republic / Chase)",
+          buyerTime: "21-day timeline (Relocating Q4)",
+          message: '"Hello Dr. Thorne, a private coastal listing matching your exact specifications for gulf-front access with zero HOA restrictions has surfaced at 1102 Pelican Point Drive ($4.2M). The sellers are motivated to complete escrow within 30 days. Let me know if you would like the architectural dossier and survey!"'
+        }
+      },
+      commercial: {
+        card1: {
+          address: "880 Innovation Parkway, Suite 400, Austin, TX",
+          specs: "14,200 sqft • Class A Creative Tech Office • 85 Workstations + Boardrooms",
+          price: "$5,400,000",
+          buyerName: "Nexura Logistics (Series B Scale-up)",
+          buyerCap: "$6,000,000 Capital Allocation (Silicon Valley Bank Line)",
+          buyerTime: "30-day lease-to-own or direct purchase",
+          message: '"Hi Daniel, I noticed Nexura\'s engineering headcount expansion in Austin. We have access to a fully wired, plug-and-play Class A tech office at 880 Innovation Pkwy (14,200 sqft) becoming available off-market next month. Zero buildout downtime required. Would your facilities team like the floorplan and lease terms?"'
+        },
+        card2: {
+          address: "350 Brickell Avenue, 18th Floor, Miami, FL",
+          specs: "9,800 sqft • Penthouse Commercial Suite • Panoramic Bay Views",
+          price: "$7,900,000",
+          buyerName: "Aegis Wealth Management (Hedge Fund)",
+          buyerCap: "$10,000,000 Corporate Reserve Treasury",
+          buyerTime: "Discreet 20-day direct purchase",
+          message: '"Hi Julian, following up on your fund\'s search for an iconic Brickell commercial suite with dedicated elevator access: 350 Brickell Ave 18th Floor ($7.9M) has quietly signaled an intent to liquidate. It comes with 12 private executive suites and secure server infrastructure. Let me know if you want the private memorandum."'
+        }
+      },
+      multifamily: {
+        card1: {
+          address: "742 Evergreen Terrace, Denver, CO",
+          specs: "18-Unit Garden Style Apartment Complex • 96% Historical Occupancy",
+          price: "$3,650,000",
+          buyerName: "Highline Real Estate Holdings (Syndicate)",
+          buyerCap: "$4,200,000 1031 Exchange Escrow Ready",
+          buyerTime: "Must close within 25 days to satisfy 1031 timeline",
+          message: '"Hi Rebecca, with your 1031 exchange replacement window closing this month, this 18-unit garden complex at 742 Evergreen Terrace in Denver ($3.65M) is an ideal match. Clean rent roll, 7.2% cap rate, and sub-metered utilities already completed. Would you like the trailing 12-month P&L statements tonight?"'
+        },
+        card2: {
+          address: "1204 Oakridge Court, Raleigh, NC",
+          specs: "12-Unit Townhome Community • Value-Add • B+ Neighborhood",
+          price: "$2,800,000",
+          buyerName: "Apex Capital Partners (Private Equity)",
+          buyerCap: "$3,500,000 Pre-Approved Commercial Debt + Equity",
+          buyerTime: "30-day closing (Standard due diligence)",
+          message: '"Hello Kevin, an off-market 12-unit townhome portfolio in Raleigh just hit our desk at $2.8M. Current rents are 25% below market with clear interior upgrade upside to hit an 8.4% pro-forma yield. Can send over the pro-forma model and rent comps if your acquisitions team is reviewing North Carolina deals this week."'
+        }
+      }
+    };
+
+    function selectAsset(assetKey) {
+      const data = assetScenarios[assetKey];
+      if (!data) return;
+
+      // Update button styling
+      const buttons = {
+        luxury: document.getElementById('btn-asset-luxury'),
+        commercial: document.getElementById('btn-asset-commercial'),
+        multifamily: document.getElementById('btn-asset-multifamily'),
+      };
+
+      Object.keys(buttons).forEach(k => {
+        if (k === assetKey) {
+          buttons[k].className = "asset-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#171717] text-white border-[#171717]";
+        } else {
+          buttons[k].className = "asset-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#FFFFFF] text-[#171717] border-[#E5E5E5] hover:border-[#171717]";
+        }
+      });
+
+      // Card 1 Updates
+      document.getElementById('card1-address').textContent = data.card1.address;
+      document.getElementById('card1-specs').textContent = data.card1.specs;
+      document.getElementById('card1-price').textContent = data.card1.price;
+      document.getElementById('card1-buyer-name').textContent = data.card1.buyerName;
+      document.getElementById('card1-buyer-cap').textContent = data.card1.buyerCap;
+      document.getElementById('card1-buyer-time').textContent = data.card1.buyerTime;
+      document.getElementById('card1-message').textContent = data.card1.message;
+
+      // Card 2 Updates
+      document.getElementById('card2-address').textContent = data.card2.address;
+      document.getElementById('card2-specs').textContent = data.card2.specs;
+      document.getElementById('card2-price').textContent = data.card2.price;
+      document.getElementById('card2-buyer-name').textContent = data.card2.buyerName;
+      document.getElementById('card2-buyer-cap').textContent = data.card2.buyerCap;
+      document.getElementById('card2-buyer-time').textContent = data.card2.buyerTime;
+      document.getElementById('card2-message').textContent = data.card2.message;
+
+      // Reset button labels
+      document.getElementById('copy-card1-btn-text').textContent = "Copy Outreach Draft";
+      document.getElementById('copy-card2-btn-text').textContent = "Copy Outreach Draft";
+    }
+
+    function copyMessageText(elementId, btnTextId) {
+      const textToCopy = document.getElementById(elementId).textContent.trim();
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const btnText = document.getElementById(btnTextId);
+        btnText.textContent = "✓ Copied to Clipboard!";
+        setTimeout(() => {
+          btnText.textContent = "Copy Outreach Draft";
+        }, 2200);
+      }).catch(err => {
+        console.error('Copy failed:', err);
+      });
+    }
+
+    function simulateSheetExport() {
+      const btn = document.getElementById('btn-export-sheet');
+      const text = document.getElementById('export-sheet-text');
+      text.textContent = "Compiling Records (.xlsx)...";
+      btn.disabled = true;
+
+      setTimeout(() => {
+        text.textContent = "Export Sample Spreadsheet (.xlsx)";
+        btn.disabled = false;
+        showToast("Spreadsheet Exported: Matched_Real_Estate_Pipeline.xlsx");
+      }, 800);
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      toastText.textContent = msg;
+      toast.classList.remove('translate-y-16', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-16', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>

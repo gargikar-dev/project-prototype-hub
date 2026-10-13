@@ -1,0 +1,53 @@
+{
+  "icp_name": "B2B SaaS Founders & Tech Decision Makers",
+  "target_roles": [
+    "SaaS Founder",
+    "Co-Founder",
+    "CTO",
+    "Technical Lead",
+    "Solo Developer",
+    "Product Manager"
+  ],
+  "target_industries": [
+    "B2B SaaS",
+    "Subscription Software",
+    "Fintech",
+    "Developer Tools"
+  ],
+  "company_stage": "Bootstrapped to Series A ($1k - $50k MRR)",
+  "target_subreddits": [
+    "SaaS",
+    "startups",
+    "webdev",
+    "Entrepreneur"
+  ],
+  "core_pain_points": [
+    "Stripe Connect integration complexity and merchant onboarding friction",
+    "High SaaS payment processing fees and unexpected chargebacks",
+    "Need simple alternative to Stripe or Paddle for collecting customer payments",
+    "Struggling with billing automation, invoicing, and subscription churn",
+    "Complex tax and merchant of record compliance"
+  ],
+  "competitors": [
+    "Stripe",
+    "Paddle",
+    "LemonSqueezy",
+    "Chargebee",
+    "Recurly"
+  ],
+  "disqualifiers": [
+    "student project",
+    "homework",
+    "looking for free money",
+    "crypto casino",
+    "gambling",
+    "resume review",
+    "hiring freelance"
+  ],
+  "product_offering": {
+    "name": "DirectPay SaaS",
+    "core_value_prop": "Simplified direct payment gateway and billing engine designed specifically for independent software companies without multi-tier Stripe Connect overhead.",
+    "link_or_cta": "https://directpay.example.com",
+    "differentiator": "5-minute setup, direct client payouts, zero monthly minimums, and built-in global sales tax handling."
+  }
+}

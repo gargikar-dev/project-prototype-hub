@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full antialiased">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reddit Client Finder — AI Automation Studio</title>
+  <meta name="description" content="Finds people on Reddit who need your services, checks if they are ready to hire, and writes friendly, helpful replies." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#FAFAFA',
+            surface: '#FFFFFF',
+            borderline: '#E5E5E5',
+            ink: '#171717',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: #FAFAFA;
+      color: #171717;
+    }
+
+    /* Hand-drawn animated dotted flow lines */
+    @keyframes marchDotted {
+      from { stroke-dashoffset: 48; }
+      to { stroke-dashoffset: 0; }
+    }
+
+    .animated-flow-line {
+      stroke: #171717;
+      stroke-width: 2.2;
+      stroke-dasharray: 6 6;
+      stroke-linecap: round;
+      animation: marchDotted 2s linear infinite;
+    }
+
+    /* Gentle floating node animation */
+    @keyframes gentleFloat1 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+    }
+    @keyframes gentleFloat2 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+    @keyframes gentleFloat3 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-3px); }
+    }
+
+    .float-node-1 { animation: gentleFloat1 4s ease-in-out infinite; }
+    .float-node-2 { animation: gentleFloat2 3.6s ease-in-out infinite 0.4s; }
+    .float-node-3 { animation: gentleFloat3 4.2s ease-in-out infinite 0.8s; }
+
+    /* Custom scroll / transitions */
+    .smooth-transition {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
+</head>
+<body class="min-h-full flex flex-col justify-between selection:bg-[#171717] selection:text-white">
+
+  <!-- TOP BAR -->
+  <header class="border-b border-[#E5E5E5] bg-[#FFFFFF] sticky top-0 z-30">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="../index.html" class="inline-flex items-center gap-2 text-sm font-semibold text-[#171717] hover:opacity-70 transition-opacity">
+        <span aria-hidden="true">←</span>
+        <span>Back to Hub</span>
+      </a>
+
+      <!-- Status Pill -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#FAFAFA] border border-[#E5E5E5] text-[#171717]">
+        <span class="w-2 h-2 rounded-full bg-[#171717] animate-pulse"></span>
+        <span>[ Live System Demonstration ]</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-5xl mx-auto px-6 py-12 flex-1 w-full space-y-14">
+
+    <!-- HEADER SECTION -->
+    <section class="max-w-2xl">
+      <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-[#FFFFFF] border border-[#E5E5E5] text-neutral-500 mb-3">
+        Inbound Intelligence Module
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#171717]">
+        Reddit Client Finder
+      </h1>
+      <p class="text-neutral-500 text-base sm:text-lg mt-3 leading-relaxed">
+        Finds people on Reddit who need your services, checks if they are ready to hire, and writes friendly, helpful replies.
+      </p>
+    </section>
+
+    <!-- 3. VISUAL DOODLE FLOWCHART (Rock-Solid Responsive Flex Layout) -->
+    <section class="bg-[#FFFFFF] border border-[#E5E5E5] rounded-2xl p-6 sm:p-8 shadow-sm">
+      <div class="flex items-center justify-between border-b border-[#E5E5E5] pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Autonomous Pipeline Flow</span>
+          <h2 class="text-base font-bold text-[#171717]">How Discussions Turn Into Opportunities</h2>
+        </div>
+        <span class="text-xs font-mono text-neutral-400 hidden sm:inline-block">Real-time Stream</span>
+      </div>
+
+      <!-- 3-Step Horizontal Flex Container -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-6 bg-white rounded-xl border border-neutral-200">
+
+        <!-- Node 1: Scanning & Listening -->
+        <div class="w-full md:w-56 bg-white border border-neutral-200 rounded-xl p-4 flex flex-col items-center text-center shadow-xs">
+          <!-- Doodle SVG Container -->
+          <div class="w-16 h-16 rounded-lg bg-[#FAFAFA] border border-neutral-200 flex items-center justify-center mb-3">
+            <svg class="w-10 h-10" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Discussions Scanned">
+              <!-- Speech bubble -->
+              <path d="M14 20 C14 14 20 10 32 10 C44 10 50 14 50 20 V32 C50 38 44 42 32 42 H22 L14 49 V39 C14 36 14 34 14 32 Z" fill="#FFFFFF" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Smiling face -->
+              <circle cx="26" cy="24" r="1.8" fill="#171717"/>
+              <circle cx="38" cy="24" r="1.8" fill="#171717"/>
+              <path d="M28 30 C30 33 34 33 36 30" stroke="#171717" stroke-width="1.8" stroke-linecap="round"/>
+              <!-- Magnifying glass inspecting -->
+              <circle cx="44" cy="38" r="9" fill="#FFFFFF" stroke="#171717" stroke-width="2"/>
+              <line x1="51" y1="45" x2="59" y2="53" stroke="#171717" stroke-width="2.5" stroke-linecap="round"/>
+              <!-- Little sparkle inside glass -->
+              <path d="M44 33 L45 36 L48 37 L45 38 L44 41 L43 38 L40 37 L43 36 Z" fill="#171717"/>
+            </svg>
+          </div>
+          <span class="text-[10px] font-bold tracking-wider uppercase text-neutral-400 mb-1">01 / SCAN</span>
+          <h3 class="text-sm font-bold text-[#171717] mb-1.5">Discussions Scanned</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Monitors subreddits for active problems &amp; needs.</p>
+        </div>
+
+        <!-- Arrow 1 (Connector between Node 1 & 2) -->
+        <div class="flex md:flex-col items-center justify-center py-2 md:py-0 text-neutral-400">
+          <div class="hidden md:flex items-center gap-1 px-1">
+            <div class="w-8 sm:w-12 h-0.5 border-t-2 border-dashed border-neutral-300 relative flex items-center justify-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#171717] absolute animate-pulse"></span>
+            </div>
+            <svg class="w-4 h-4 text-[#171717]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+          <div class="flex md:hidden items-center justify-center py-1">
+            <svg class="w-4 h-4 text-[#171717]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Node 2: Intent Evaluation -->
+        <div class="w-full md:w-56 bg-white border border-neutral-200 rounded-xl p-4 flex flex-col items-center text-center shadow-xs">
+          <!-- Doodle SVG Container with 9.4★ pill -->
+          <div class="w-16 h-16 rounded-lg bg-[#FAFAFA] border border-neutral-200 flex items-center justify-center mb-3 relative">
+            <svg class="w-10 h-10" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Intent Scored">
+              <!-- Lightbulb glowing over head -->
+              <path d="M28 14 C28 9 36 9 36 14 C36 16 34 17 34 19 H30 C30 17 28 16 28 14 Z" fill="#FFFFFF" stroke="#171717" stroke-width="1.8"/>
+              <line x1="30" y1="20" x2="34" y2="20" stroke="#171717" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="32" y1="6" x2="32" y2="8" stroke="#171717" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="24" y1="8" x2="26" y2="10" stroke="#171717" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="40" y1="8" x2="38" y2="10" stroke="#171717" stroke-width="1.6" stroke-linecap="round"/>
+
+              <!-- Robot bot head -->
+              <rect x="18" y="22" width="28" height="24" rx="6" fill="#FFFFFF" stroke="#171717" stroke-width="2"/>
+              <!-- Ears -->
+              <rect x="14" y="30" width="4" height="8" rx="1.5" fill="#171717"/>
+              <rect x="46" y="30" width="4" height="8" rx="1.5" fill="#171717"/>
+              <!-- Robot eyes -->
+              <circle cx="26" cy="32" r="2.2" fill="#171717"/>
+              <circle cx="38" cy="32" r="2.2" fill="#171717"/>
+              <!-- Smile line -->
+              <path d="M27 39 C29 41 35 41 37 39" stroke="#171717" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <!-- 9.4★ intent score pill -->
+            <span class="absolute -bottom-2 px-2 py-0.5 bg-[#171717] text-white text-[9px] font-bold rounded-full border border-white tracking-tight shadow-xs">
+              9.4★
+            </span>
+          </div>
+          <span class="text-[10px] font-bold tracking-wider uppercase text-neutral-400 mb-1">02 / FILTER</span>
+          <h3 class="text-sm font-bold text-[#171717] mb-1.5">Intent Scored</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Filters out casual posts and scores buyer readiness.</p>
+        </div>
+
+        <!-- Arrow 2 (Connector between Node 2 & 3) -->
+        <div class="flex md:flex-col items-center justify-center py-2 md:py-0 text-neutral-400">
+          <div class="hidden md:flex items-center gap-1 px-1">
+            <div class="w-8 sm:w-12 h-0.5 border-t-2 border-dashed border-neutral-300 relative flex items-center justify-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#171717] absolute animate-pulse"></span>
+            </div>
+            <svg class="w-4 h-4 text-[#171717]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+          <div class="flex md:hidden items-center justify-center py-1">
+            <svg class="w-4 h-4 text-[#171717]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Node 3: Ready Deliverable -->
+        <div class="w-full md:w-56 bg-white border border-neutral-200 rounded-xl p-4 flex flex-col items-center text-center shadow-xs">
+          <!-- Doodle SVG Container -->
+          <div class="w-16 h-16 rounded-lg bg-[#FAFAFA] border border-neutral-200 flex items-center justify-center mb-3">
+            <svg class="w-10 h-10" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Reply Prepared">
+              <!-- Folded envelope -->
+              <rect x="12" y="18" width="40" height="28" rx="5" fill="#FFFFFF" stroke="#171717" stroke-width="2"/>
+              <!-- Flap folds -->
+              <path d="M12 20 L32 34 L52 20" stroke="#171717" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 44 L25 31" stroke="#171717" stroke-width="1.4"/>
+              <path d="M52 44 L39 31" stroke="#171717" stroke-width="1.4"/>
+              <!-- Checkmark wax seal badge -->
+              <circle cx="32" cy="34" r="7" fill="#FFFFFF" stroke="#171717" stroke-width="1.8"/>
+              <path d="M29 34 L31 36 L35 32" stroke="#171717" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Little sparkle stars -->
+              <path d="M48 13 L49 15 L51 16 L49 17 L48 19 L47 17 L45 16 L47 15 Z" fill="#171717"/>
+            </svg>
+          </div>
+          <span class="text-[10px] font-bold tracking-wider uppercase text-neutral-400 mb-1">03 / DELIVER</span>
+          <h3 class="text-sm font-bold text-[#171717] mb-1.5">Reply Prepared</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Drafts a helpful, non-salesy value reply.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. PLAIN-ENGLISH STEP-BY-STEP BREAKDOWN (3 visual columns) -->
+    <section>
+      <div class="mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Step-by-Step Breakdown</span>
+        <h2 class="text-xl font-bold text-[#171717] mt-0.5">How It Works Behind The Scenes</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Card 1: 24/7 Listening -->
+        <div class="bg-[#FFFFFF] border border-[#E5E5E5] rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-[#171717] transition-colors">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#FAFAFA] border border-[#E5E5E5] flex items-center justify-center font-bold text-sm text-[#171717] mb-4">
+              01
+            </div>
+            <h3 class="text-lg font-bold text-[#171717] mb-2">24/7 Listening</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed">
+              We watch conversations in business and startup forums where people post about problems they want solved.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#E5E5E5] flex items-center text-xs font-mono text-neutral-400">
+            <span>r/SaaS • r/startups • r/smallbiz</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Quality Filter -->
+        <div class="bg-[#FFFFFF] border border-[#E5E5E5] rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-[#171717] transition-colors">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#FAFAFA] border border-[#E5E5E5] flex items-center justify-center font-bold text-sm text-[#171717] mb-4">
+              02
+            </div>
+            <h3 class="text-lg font-bold text-[#171717] mb-2">Quality Filter</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed">
+              The system ignores casual comments and only picks people who have real budget and urgency.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#E5E5E5] flex items-center text-xs font-mono text-neutral-400">
+            <span>Filter noise &amp; tyre-kickers</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Helpful First Contact -->
+        <div class="bg-[#FFFFFF] border border-[#E5E5E5] rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-[#171717] transition-colors">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#FAFAFA] border border-[#E5E5E5] flex items-center justify-center font-bold text-sm text-[#171717] mb-4">
+              03
+            </div>
+            <h3 class="text-lg font-bold text-[#171717] mb-2">Helpful First Contact</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed">
+              It drafts a polite, genuine response that gives helpful advice first so you stand out immediately.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-[#E5E5E5] flex items-center text-xs font-mono text-neutral-400">
+            <span>Zero spam • 100% consultative</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. INTERACTIVE TEST DRIVE (No Code / No JSON) -->
+    <section class="bg-[#FFFFFF] border border-[#E5E5E5] rounded-2xl p-6 sm:p-8 shadow-sm">
+      <div class="max-w-xl mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Interactive Test Drive</span>
+        <h2 class="text-2xl font-bold text-[#171717] mt-0.5">Explore Live Match Scenarios</h2>
+        <p class="text-neutral-500 text-sm mt-1.5 leading-relaxed">
+          Select an industry below to see how the system identifies genuine hiring intent and produces high-converting replies.
+        </p>
+      </div>
+
+      <!-- 3 Scenario Selector Buttons -->
+      <div class="flex flex-wrap gap-2.5 mb-8">
+        <button 
+          id="btn-scenario-software" 
+          onclick="selectScenario('software')"
+          class="scenario-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#171717] text-white border-[#171717]"
+        >
+          1. Software Company
+        </button>
+
+        <button 
+          id="btn-scenario-creative" 
+          onclick="selectScenario('creative')"
+          class="scenario-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#FFFFFF] text-[#171717] border-[#E5E5E5] hover:border-[#171717]"
+        >
+          2. Creative Agency
+        </button>
+
+        <button 
+          id="btn-scenario-local" 
+          onclick="selectScenario('local')"
+          class="scenario-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#FFFFFF] text-[#171717] border-[#E5E5E5] hover:border-[#171717]"
+        >
+          3. Local Business
+        </button>
+      </div>
+
+      <!-- Dynamic Scenario Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+        
+        <!-- LEFT: Simulated Forum Post Preview -->
+        <div class="bg-[#FAFAFA] border border-[#E5E5E5] rounded-xl p-5 sm:p-6 space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-[#E5E5E5]">
+            <div class="flex items-center gap-2">
+              <span id="forum-subreddit" class="text-xs font-bold px-2 py-0.5 rounded bg-[#FFFFFF] border border-[#E5E5E5] text-[#171717]">
+                r/SaaS
+              </span>
+              <span id="forum-author" class="text-xs font-medium text-neutral-500">
+                u/tech_founder_dave
+              </span>
+            </div>
+            <span id="forum-time" class="text-xs text-neutral-400">
+              18m ago
+            </span>
+          </div>
+
+          <div>
+            <h4 id="forum-title" class="text-base font-bold text-[#171717] mb-2 leading-snug">
+              Looking to hire an engineer to automate our customer onboarding workflows
+            </h4>
+            <p id="forum-body" class="text-neutral-600 text-sm leading-relaxed whitespace-pre-line">
+              We're currently scaling past 500 active customers and our manual setup in Airtable and Stripe is breaking. Budget is roughly $4k-$6k for an experienced dev who can build a reliable webhook integration. Need someone who can start this week.
+            </p>
+          </div>
+
+          <!-- Detection metadata tags -->
+          <div class="pt-3 border-t border-[#E5E5E5] flex flex-wrap gap-2 text-[11px] font-medium text-neutral-500">
+            <span class="inline-flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Budget Stated ($4k-$6k)
+            </span>
+            <span class="inline-flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Urgency: High (This Week)
+            </span>
+          </div>
+        </div>
+
+        <!-- RIGHT: Match Badge & Ready-to-Send Reply -->
+        <div class="space-y-4">
+          
+          <!-- Intent Match Badge -->
+          <div class="bg-[#FAFAFA] border border-[#E5E5E5] rounded-xl p-4 flex items-center justify-between">
+            <div>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 block">Intent Score Analysis</span>
+              <span id="intent-badge-text" class="text-sm sm:text-base font-extrabold text-[#171717]">
+                9.8 / 10 — High Buying Intent
+              </span>
+            </div>
+            <div class="w-9 h-9 rounded-full bg-[#FFFFFF] border border-[#E5E5E5] flex items-center justify-center font-bold text-xs text-[#171717]">
+              ✓
+            </div>
+          </div>
+
+          <!-- Formatted Ready-to-Send Reply Box -->
+          <div class="bg-[#FAFAFA] border border-[#E5E5E5] rounded-xl p-5 sm:p-6 space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-[#171717]"></span>
+                <span class="text-xs font-bold uppercase tracking-wider text-[#171717]">Ready-to-Send Reply</span>
+              </div>
+              <span class="text-[11px] text-neutral-400 font-mono">Personalized Draft</span>
+            </div>
+
+            <!-- Reply Text Box -->
+            <div class="bg-[#FFFFFF] border border-[#E5E5E5] rounded-lg p-4">
+              <p id="reply-text" class="text-xs sm:text-sm text-[#171717] leading-relaxed whitespace-pre-line font-normal">
+                Hey Dave! Congrats on crossing 500 customers—that's a huge milestone. For syncing Stripe and Airtable at that volume, the cleanest approach is an idempotent webhook handler with queue retries so failed webhooks never drop customer records. I've engineered similar automated pipelines for B2B SaaS teams and could easily get this humming for you within a couple of days. Drop me a DM if you'd like to see a quick loom walkthrough or discuss the architecture!
+              </p>
+            </div>
+
+            <!-- Copy Action Button -->
+            <button 
+              id="copy-reply-btn" 
+              onclick="copyReplyMessage()"
+              class="w-full py-3 px-4 rounded-xl bg-[#171717] text-white font-semibold text-xs sm:text-sm hover:bg-neutral-800 transition-colors flex items-center justify-center gap-2"
+            >
+              <svg id="copy-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+              </svg>
+              <span id="copy-btn-text">Copy Message</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-[#E5E5E5] bg-[#FFFFFF] py-8 mt-16">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-[#171717]">Reddit Client Finder</span>
+        <span>•</span>
+        <span>AI Automation Studio</span>
+      </div>
+      <div>
+        <span>Minimal Black &amp; White Architecture</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT FOR INTERACTIVE SCENARIOS -->
+  <script>
+    const scenarios = {
+      software: {
+        subreddit: "r/SaaS",
+        author: "u/tech_founder_dave",
+        time: "18m ago",
+        title: "Looking to hire an engineer to automate our customer onboarding workflows",
+        body: "We're currently scaling past 500 active customers and our manual setup in Airtable and Stripe is breaking. Budget is roughly $4k-$6k for an experienced dev who can build a reliable webhook integration. Need someone who can start this week.",
+        intentText: "9.8 / 10 — High Buying Intent",
+        reply: "Hey Dave! Congrats on crossing 500 customers—that's a huge milestone. For syncing Stripe and Airtable at that volume, the cleanest approach is an idempotent webhook handler with queue retries so failed webhooks never drop customer records. I've engineered similar automated pipelines for B2B SaaS teams and could easily get this humming for you within a couple of days. Drop me a DM if you'd like to see a quick loom walkthrough or discuss the architecture!"
+      },
+      creative: {
+        subreddit: "r/marketing",
+        author: "u/studio_sarah_ny",
+        time: "34m ago",
+        title: "Need a contractor to build custom client reporting dashboards before Q4",
+        body: "Our agency spends 15+ hours every Friday copying Google Analytics, Meta Ads, and Shopify data into Google Slides for 20 client accounts. We have approved budget to pay a specialist who can automate these weekly reports. Please share your portfolio or past examples.",
+        intentText: "9.5 / 10 — High Buying Intent",
+        reply: "Hi Sarah, 15 hours every Friday is brutal—reporting is definitely one of the highest-leverage workflows to automate. A consolidated dashboard connecting Meta, GA4, and Shopify through Looker Studio or custom automated email digests usually cuts Friday admin down to under 5 minutes total. I specialize in agency automation suites; I'd be glad to share a 2-minute video demo of a live reporting deck we built for a similar agency. Feel free to shoot me a message!"
+      },
+      local: {
+        subreddit: "r/smallbusiness",
+        author: "u/austin_plumbing_co",
+        time: "1h ago",
+        title: "Is there an automated tool for missed call text-backs and instant booking?",
+        body: "We lose at least 5-10 emergency repair calls every weekend because our techs are under sinks and can't pick up the phone in time. Want to set up an automated system that texts callers back instantly with an emergency booking link. Looking for recommendations or someone who can set it up for our team.",
+        intentText: "9.4 / 10 — High Buying Intent",
+        reply: "Hey there! Missed calls are the #1 leak in service businesses—especially on weekends when emergency callers just ring the next plumber on Google. An automated Twilio/VoIP trigger that fires an SMS within 15 seconds with your direct dispatch calendar will recover around 60-70% of those jobs right away. I've set up turnkey missed-call dispatch bots for local contractors; happy to share the blueprint or help you get it running before this coming weekend!"
+      }
+    };
+
+    function selectScenario(type) {
+      const data = scenarios[type];
+      if (!data) return;
+
+      // Update active button state
+      const buttons = {
+        software: document.getElementById('btn-scenario-software'),
+        creative: document.getElementById('btn-scenario-creative'),
+        local: document.getElementById('btn-scenario-local'),
+      };
+
+      Object.keys(buttons).forEach(key => {
+        if (key === type) {
+          buttons[key].className = "scenario-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#171717] text-white border-[#171717]";
+        } else {
+          buttons[key].className = "scenario-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#FFFFFF] text-[#171717] border-[#E5E5E5] hover:border-[#171717]";
+        }
+      });
+
+      // Update content elements
+      document.getElementById('forum-subreddit').textContent = data.subreddit;
+      document.getElementById('forum-author').textContent = data.author;
+      document.getElementById('forum-time').textContent = data.time;
+      document.getElementById('forum-title').textContent = data.title;
+      document.getElementById('forum-body').textContent = data.body;
+      document.getElementById('intent-badge-text').textContent = data.intentText;
+      document.getElementById('reply-text').textContent = data.reply;
+
+      // Reset copy button state
+      const copyBtnText = document.getElementById('copy-btn-text');
+      copyBtnText.textContent = "Copy Message";
+    }
+
+    function copyReplyMessage() {
+      const textToCopy = document.getElementById('reply-text').textContent.trim();
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const copyBtnText = document.getElementById('copy-btn-text');
+        copyBtnText.textContent = "✓ Copied to Clipboard!";
+        setTimeout(() => {
+          copyBtnText.textContent = "Copy Message";
+        }, 2200);
+      }).catch(err => {
+        console.error('Copy failed:', err);
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+# -*- coding: utf-8 -*-
+"""Batch 3: 15 Fresh Verified LinkedIn Leads (<24h Old | US & UK | ICP Compliant)"""
+
+BATCH_3_LEADS = [
+    {
+        "date_posted": "2026-09-06 (6 hours ago)",
+        "company_name": "7Layer Studio",
+        "role_needed": "High-Ticket Appointment Setter (1099 Contractor)",
+        "linkedin_url": "https://www.linkedin.com/jobs/view/full-time-professional-appointment-setter-remote-4462671414",
+        "city_state": "Dayton, OH (Remote)",
+        "country": "United States",
+        "company_size": "10–20 employees",
+        "email_contact": "contact@7layerstudio.com",
+        "deal_value": "$10,000 – $30,000 custom architectures",
+        "remarks": "Posted 6h ago. Boutique AI & automation software studio hiring 1099 appointment setter to prospect and book high-ticket discovery calls with business founders."
+    },
+    {
+        "date_posted": "2026-09-06 (1 hour ago)",
+        "company_name": "Revio Digital",
+        "role_needed": "B2B Sales Growth Partner / Outbound Lead Gen",
+        "linkedin_url": "https://uk.linkedin.com/jobs/view/b2b-sales-growth-partner-revio-digital-at-revio-digital-4464027948",
+        "city_state": "Sussex (Remote)",
+        "country": "United Kingdom",
+        "company_size": "10–25 employees",
+        "email_contact": "hello@reviodigital.co.uk",
+        "deal_value": "£7,500 – £15,000 retainers",
+        "remarks": "Posted 1h ago. Fast-growing UK digital & web agency hiring self-employed B2B growth partner to generate local business client appointments and manage sales pipelines."
+    },
+    {
+        "date_posted": "2026-09-06 (8 hours ago)",
+        "company_name": "Switching Made Simple",
+        "role_needed": "Remote Business Development Executive / Appointment Setter",
+        "linkedin_url": "https://uk.linkedin.com/jobs/view/remote-business-development-executive-appointment-setter-at-switching-made-simple-4464033150",
+        "city_state": "Rossendale, England (Remote)",
+        "country": "United Kingdom",
+        "company_size": "10–25 employees",
+        "email_contact": "info@switchingmadesimple.co.uk",
+        "deal_value": "£8,000 – £18,000 commercial contracts",
+        "remarks": "Posted 8h ago. Commercial solutions firm seeking remote appointment setter for proactive B2B telephone and digital outreach to UK businesses."
+    },
+    {
+        "date_posted": "2026-09-06 (1 hour ago)",
+        "company_name": "Sargent Connects",
+        "role_needed": "Sales Executive / Remote Outbound Lead Generator",
+        "linkedin_url": "https://uk.linkedin.com/jobs/view/sales-executive-at-sargent-connects-4464040128",
+        "city_state": "United Kingdom (Remote)",
+        "country": "United Kingdom",
+        "company_size": "10–20 employees",
+        "email_contact": "careers@sargentconnects.com",
+        "deal_value": "£8,000 – £14,000 marketing packages",
+        "remarks": "Posted 1h ago. High-growth B2B startup hiring contract sales executive to conduct cold outreach, qualify warm leads, and book sales meetings."
+    },
+    {
+        "date_posted": "2026-09-06 (4 hours ago)",
+        "company_name": "Speak 10X Better",
+        "role_needed": "Appointment Setter Specialist",
+        "linkedin_url": "https://www.linkedin.com/jobs/view/appointment-setter-specialist-at-speak-10x-better-4464031713",
+        "city_state": "United States (Remote)",
+        "country": "United States",
+        "company_size": "10–20 employees",
+        "email_contact": "contact@speak10xbetter.com",
+        "deal_value": "$7,000 – $15,000 executive packages",
+        "remarks": "Posted 4h ago. Executive communications boutique firm hiring dedicated appointment setter to conduct social DM and email prospecting to corporate leaders."
+    },
+    {
+        "date_posted": "2026-09-06 (23 hours ago)",
+        "company_name": "Elite CEOs",
+        "role_needed": "High-Ticket Appointment Setter (DM & Inbound)",
+        "linkedin_url": "https://www.linkedin.com/jobs/view/appointment-setter-at-elite-ceos-4431231907",
+        "city_state": "California (Remote)",
+        "country": "United States",
+        "company_size": "15–30 employees",
+        "email_contact": "team@eliteceos.com",
+        "deal_value": "$7,000 – $18,000 consulting packages",
+        "remarks": "Posted 23h ago. High-ticket consulting program hiring remote appointment setter to manage DM outreach and schedule qualified discovery calls ($2.5k–$7k/mo pay)."
+    },
+    {
+        "date_posted": "2026-09-06 (19 hours ago)",
+        "company_name": "flodeskai",
+        "role_needed": "Cold Calling Expert / B2B Appointment Setter",
+        "linkedin_url": "https://www.linkedin.com/jobs/view/cold-calling-expert-4461493658",
+        "city_state": "Remote, OR",
+        "country": "United States",
+        "company_size": "10–20 employees",
+        "email_contact": "hello@flodeskai.com",
+        "deal_value": "$8,000 – $16,000 contract value",
+        "remarks": "Posted 19h ago. Growth-focused sales firm hiring cold calling contractor to streamline customer outreach and book qualified appointments with business owners."
+    },
+    {
+        "date_posted": "2026-09-06 (12 hours ago)",
+        "company_name": "Aries LLC",
+        "role_needed": "Remote Event Sales & Outreach Representative",
+        "linkedin_url": "https://www.linkedin.com/jobs/view/remote-event-sales-outreach-representative-4462676080",
+        "city_state": "Los Angeles, CA (Remote)",
+        "country": "United States",
+        "company_size": "10–20 employees",
+        "email_contact": "info@ariesentertainment.com",
+        "deal_value": "$10,000 – $35,000 high-ticket bookings",
+        "remarks": "Posted 12h ago. Entertainment and events production company seeking remote outreach contractor to prospect corporate clients and close high-ticket bookings ($300/deal bonus)."
+    },
+    {
+        "date_posted": "2026-09-06 (18 hours ago)",
+        "company_name": "East London Times",
+        "role_needed": "Commercial External Sales Partner / Outbound Lead Gen",
+        "linkedin_url": "https://uk.linkedin.com/jobs/view/commercial-external-sales-partner-at-east-london-times-4461484685",
+        "city_state": "London Area",
+        "country": "United Kingdom",
+        "company_size": "10–25 employees",
+        "email_contact": "advertise@eastlondontimes.co.uk",
+        "deal_value": "£7,500 – £20,000 advertising agreements",
+        "remarks": "Posted 18h ago. Digital media publication hiring external sales partner to prospect local commercial businesses, real estate developers, and corporate sponsors."
+    },
+    {
+        "date_posted": "2026-09-06 (53 minutes ago)",
+        "company_name": "OpenSpot Parking",
+        "role_needed": "Business Development Representative (Outbound Sales)",
+        "linkedin_url": "https://www.linkedin.com/jobs/view/business-development-representative-at-openspot-parking-4461838470",
+        "city_state": "United States (Remote)",
+        "country": "United States",
+        "company_size": "10–25 employees",
+        "email_contact": "founders@openspotparking.com",
+        "deal_value": "$12,000 – $30,000 SaaS contracts",
+        "remarks": "Posted 53m ago. Parking management tech startup hiring hungry contract BDR to hunt leads, run direct outreach, and book demos with commercial property managers."
+    },
+    {
+        "date_posted": "2026-09-06 (22 hours ago)",
+        "company_name": "Softwareosity",
+        "role_needed": "Lead Generation Specialist",
+        "linkedin_url": "https://www.linkedin.com/jobs/view/lead-generation-specialist-at-softwareosity-4463771530",
+        "city_state": "Indiana (Remote)",
+        "country": "United States",
+        "company_size": "10–25 employees",
+        "email_contact": "contact@softwareosity.com",
+        "deal_value": "$15,000 – $40,000 software contracts",
+        "remarks": "Posted 22h ago. Boutique software agency specializing in AI seeking lead gen specialist to source, evaluate, and manage high-value enterprise sales pipelines."
+    },
+    {
+        "date_posted": "2026-09-06 (4 hours ago)",
+        "company_name": "Biz Into Ai",
+        "role_needed": "B2B Sales Representative / Cold Caller",
+        "linkedin_url": "https://www.linkedin.com/jobs/view/sales-representative-4462684495",
+        "city_state": "Houston, TX (Remote)",
+        "country": "United States",
+        "company_size": "10–20 employees",
+        "email_contact": "growth@bizintoai.com",
+        "deal_value": "$8,000 – $22,000 implementations",
+        "remarks": "Posted 4h ago. AI solutions firm hiring remote outbound B2B sales contractor to cold call small business owners and set qualified appointments."
+    },
+    {
+        "date_posted": "2026-09-06 (10 hours ago)",
+        "company_name": "BB Laser Engraved Gifts",
+        "role_needed": "Business Development Manager (Freelance / Commission)",
+        "linkedin_url": "https://uk.linkedin.com/jobs/view/business-development-manager-freelance-commission-based-4451507829",
+        "city_state": "United Kingdom (Remote)",
+        "country": "United Kingdom",
+        "company_size": "10–20 employees",
+        "email_contact": "enquiries@bblaser.co.uk",
+        "deal_value": "£7,000 – £15,000 corporate accounts",
+        "remarks": "Posted 10h ago. Growing bespoke manufacturing business seeking freelance B2B development partner to prospect corporate gifting and hospitality accounts."
+    },
+    {
+        "date_posted": "2026-09-06 (10 hours ago)",
+        "company_name": "avua",
+        "role_needed": "Business Development Consultant (Commission Only)",
+        "linkedin_url": "https://uk.linkedin.com/jobs/view/business-development-consultant-commission-only-at-avua-4464011782",
+        "city_state": "London (Remote)",
+        "country": "United Kingdom",
+        "company_size": "10–25 employees",
+        "email_contact": "contact@avua.com",
+        "deal_value": "£10,000 – £25,000 search retainers",
+        "remarks": "Posted 10h ago. Talent intelligence firm hiring commission-based outbound sales consultant to prospect corporate leaders and book high-ticket service engagements."
+    },
+    {
+        "date_posted": "2026-09-06 (18 hours ago)",
+        "company_name": "LaundryGrab",
+        "role_needed": "B2B Commercial Sales Representative",
+        "linkedin_url": "https://www.linkedin.com/jobs/view/b2b-outside-sales-representative-%E2%80%93-houston-territory-at-laundrygrab-4462659282",
+        "city_state": "Houston, TX",
+        "country": "United States",
+        "company_size": "10–25 employees",
+        "email_contact": "partnerships@laundrygrab.com",
+        "deal_value": "$8,000 – $25,000 commercial contracts",
+        "remarks": "Posted 18h ago. Commercial services platform hiring outbound sales representative to prospect commercial property managers, fitness centers, and corporate facilities."
+    }
+]

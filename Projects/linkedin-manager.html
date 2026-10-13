@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full antialiased">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autonomous LinkedIn Growth Fleet — AI Automation Studio</title>
+  <meta name="description" content="A 12-agent AI operations fleet that interviews you for ideas, turns long-form content into posts, monitors industry discussions, and drives executive engagement." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#FAFAFA',
+            surface: '#FFFFFF',
+            borderline: '#E5E5E5',
+            ink: '#171717',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: #FAFAFA;
+      color: #171717;
+    }
+
+    .smooth-transition {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  </style>
+</head>
+<body class="min-h-full flex flex-col justify-between selection:bg-[#171717] selection:text-white">
+
+  <!-- 1. TOP NAVIGATION -->
+  <header class="border-b border-[#E5E5E5] bg-[#FFFFFF] sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="../index.html" class="inline-flex items-center gap-2 text-sm font-semibold text-[#171717] hover:opacity-70 transition-opacity">
+        <span aria-hidden="true">←</span>
+        <span>Back to Hub</span>
+      </a>
+
+      <!-- Pill Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#FAFAFA] border border-[#E5E5E5] text-[#171717]">
+        <span class="w-2 h-2 rounded-full bg-[#171717] animate-pulse"></span>
+        <span>[ 12 Specialized Agent Modules Active ]</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="max-w-6xl mx-auto px-6 py-12 flex-1 w-full space-y-16">
+
+    <!-- 2. HERO SECTION -->
+    <section class="max-w-3xl">
+      <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-[#FFFFFF] border border-[#E5E5E5] text-neutral-500 mb-3">
+        ORGANIC BRAND &amp; OUTBOUND SUITE
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#171717] leading-tight">
+        Autonomous LinkedIn Growth Fleet
+      </h1>
+      <p class="text-neutral-500 text-base sm:text-lg mt-4 leading-relaxed">
+        A 12-agent AI operations fleet that interviews you for ideas, turns long-form content into posts, monitors industry discussions, and drives executive engagement—all in your authentic human voice.
+      </p>
+    </section>
+
+    <!-- 3. HIGH-LEVEL FLOWCHART (Rock-solid, fully responsive flex layout) -->
+    <section class="bg-[#FFFFFF] border border-[#E5E5E5] rounded-2xl p-6 sm:p-8 shadow-sm">
+      <div class="flex items-center justify-between border-b border-[#E5E5E5] pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Operational Choreography</span>
+          <h2 class="text-base sm:text-lg font-bold text-[#171717]">How the 12-Agent Ecosystem Coordinates</h2>
+        </div>
+        <span class="text-xs font-mono text-neutral-400 hidden sm:inline-block">Closed-Loop System</span>
+      </div>
+
+      <!-- 4 Connected Horizontal Stages -->
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-3 p-5 sm:p-6 bg-[#FAFAFA] rounded-xl border border-neutral-200">
+        
+        <!-- Stage 1: 01 / CAPTURE -->
+        <div class="w-full lg:w-56 bg-white border border-neutral-200 rounded-xl p-4 flex flex-col items-center text-center shadow-xs">
+          <div class="w-12 h-12 rounded-lg bg-[#FAFAFA] border border-neutral-200 flex items-center justify-center mb-3">
+            <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 6 C13.8 6 12 7.8 12 10 V16 C12 18.2 13.8 20 16 20 C18.2 20 20 18.2 20 16 V10 C20 7.8 18.2 6 16 6 Z" stroke="#171717" stroke-width="2" stroke-linecap="round"/>
+              <path d="M8 15 C8 19.4 11.6 23 16 23 C20.4 23 24 19.4 24 15" stroke="#171717" stroke-width="2" stroke-linecap="round"/>
+              <line x1="16" y1="23" x2="16" y2="27" stroke="#171717" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="text-[10px] font-bold tracking-wider uppercase text-neutral-400 mb-1">STAGE 01</span>
+          <h3 class="text-sm font-bold text-[#171717] mb-1">01 / CAPTURE</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Interviews you &amp; extracts high-performing hooks.</p>
+        </div>
+
+        <!-- Arrow 1 (Desktop horizontal, mobile vertical) -->
+        <div class="flex lg:flex-col items-center justify-center py-1 text-neutral-400">
+          <div class="hidden lg:flex items-center gap-1">
+            <div class="w-6 h-0.5 border-t-2 border-dashed border-neutral-300 relative flex items-center justify-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#171717] absolute animate-pulse"></span>
+            </div>
+            <svg class="w-4 h-4 text-[#171717]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+          <div class="flex lg:hidden items-center justify-center">
+            <svg class="w-4 h-4 text-[#171717]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Stage 2: 02 / CRAFT -->
+        <div class="w-full lg:w-56 bg-white border border-neutral-200 rounded-xl p-4 flex flex-col items-center text-center shadow-xs">
+          <div class="w-12 h-12 rounded-lg bg-[#FAFAFA] border border-neutral-200 flex items-center justify-center mb-3">
+            <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="7" y="6" width="18" height="20" rx="3" stroke="#171717" stroke-width="2"/>
+              <line x1="11" y1="11" x2="21" y2="11" stroke="#171717" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="11" y1="16" x2="21" y2="16" stroke="#171717" stroke-width="1.6" stroke-linecap="round"/>
+              <line x1="11" y1="21" x2="17" y2="21" stroke="#171717" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="text-[10px] font-bold tracking-wider uppercase text-neutral-400 mb-1">STAGE 02</span>
+          <h3 class="text-sm font-bold text-[#171717] mb-1">02 / CRAFT</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Writes, humanizes, &amp; repurposes your stories.</p>
+        </div>
+
+        <!-- Arrow 2 -->
+        <div class="flex lg:flex-col items-center justify-center py-1 text-neutral-400">
+          <div class="hidden lg:flex items-center gap-1">
+            <div class="w-6 h-0.5 border-t-2 border-dashed border-neutral-300 relative flex items-center justify-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#171717] absolute animate-pulse"></span>
+            </div>
+            <svg class="w-4 h-4 text-[#171717]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+          <div class="flex lg:hidden items-center justify-center">
+            <svg class="w-4 h-4 text-[#171717]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Stage 3: 03 / ENGAGE -->
+        <div class="w-full lg:w-56 bg-white border border-neutral-200 rounded-xl p-4 flex flex-col items-center text-center shadow-xs">
+          <div class="w-12 h-12 rounded-lg bg-[#FAFAFA] border border-neutral-200 flex items-center justify-center mb-3">
+            <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 10 C7 7.8 8.8 6 11 6 H21 C23.2 6 25 7.8 25 10 V18 C25 20.2 23.2 22 21 22 H14 L9 26 V22 H11 C8.8 22 7 20.2 7 18 Z" stroke="#171717" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="12" cy="14" r="1.5" fill="#171717"/>
+              <circle cx="16" cy="14" r="1.5" fill="#171717"/>
+              <circle cx="20" cy="14" r="1.5" fill="#171717"/>
+            </svg>
+          </div>
+          <span class="text-[10px] font-bold tracking-wider uppercase text-neutral-400 mb-1">STAGE 03</span>
+          <h3 class="text-sm font-bold text-[#171717] mb-1">03 / ENGAGE</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Monitors threads &amp; drafts thoughtful comments.</p>
+        </div>
+
+        <!-- Arrow 3 -->
+        <div class="flex lg:flex-col items-center justify-center py-1 text-neutral-400">
+          <div class="hidden lg:flex items-center gap-1">
+            <div class="w-6 h-0.5 border-t-2 border-dashed border-neutral-300 relative flex items-center justify-center">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#171717] absolute animate-pulse"></span>
+            </div>
+            <svg class="w-4 h-4 text-[#171717]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+          <div class="flex lg:hidden items-center justify-center">
+            <svg class="w-4 h-4 text-[#171717]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Stage 4: 04 / SCALE -->
+        <div class="w-full lg:w-56 bg-white border border-neutral-200 rounded-xl p-4 flex flex-col items-center text-center shadow-xs">
+          <div class="w-12 h-12 rounded-lg bg-[#FAFAFA] border border-neutral-200 flex items-center justify-center mb-3">
+            <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="10" stroke="#171717" stroke-width="2"/>
+              <path d="M11 16 L14.5 19.5 L21 13" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M24 7 L27 4 M27 4 H22 M27 4 V9" stroke="#171717" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="text-[10px] font-bold tracking-wider uppercase text-neutral-400 mb-1">STAGE 04</span>
+          <h3 class="text-sm font-bold text-[#171717] mb-1">04 / SCALE</h3>
+          <p class="text-xs text-neutral-500 leading-relaxed">Amplifies with team advocacy &amp; tracks buyer analytics.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. THE 12-AGENT CAPABILITY MATRIX -->
+    <section class="space-y-10">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Enterprise Architecture</span>
+        <h2 class="text-2xl font-bold text-[#171717] mt-0.5">The 12 Specialized Agent Modules</h2>
+        <p class="text-neutral-500 text-sm mt-1.5 leading-relaxed max-w-2xl">
+          Each autonomous agent operates with a dedicated domain model, collaborating silently in the background so your personal brand grows every single week.
+        </p>
+      </div>
+
+      <!-- GROUP 1: CAPTURE & POSITIONING -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#171717]"></span>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-[#171717]">1. Capture &amp; Positioning</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          
+          <!-- Agent 1: Voice Interviewer -->
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 hover:border-[#171717] transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-neutral-600">agent-01</span>
+                <span class="text-xs text-neutral-400">Voice Sync</span>
+              </div>
+              <h4 class="text-base font-bold text-[#171717] mb-1">Voice Interviewer</h4>
+              <p class="text-[11px] font-mono text-neutral-400 mb-3">linkedin-interviewer</p>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                Asks you 3 quick conversational questions via voice or text to pull out your best ideas without typing.
+              </p>
+            </div>
+          </div>
+
+          <!-- Agent 2: Profile Optimizer -->
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 hover:border-[#171717] transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-neutral-600">agent-02</span>
+                <span class="text-xs text-neutral-400">Conversion</span>
+              </div>
+              <h4 class="text-base font-bold text-[#171717] mb-1">Profile Optimizer</h4>
+              <p class="text-[11px] font-mono text-neutral-400 mb-3">linkedin-profile-optimizer</p>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                Continuously refines your headline, banner copy, and bio to convert profile visitors into warm inquiries.
+              </p>
+            </div>
+          </div>
+
+          <!-- Agent 3: Hook Extractor -->
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 hover:border-[#171717] transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-neutral-600">agent-03</span>
+                <span class="text-xs text-neutral-400">Viral Hooks</span>
+              </div>
+              <h4 class="text-base font-bold text-[#171717] mb-1">Hook Extractor</h4>
+              <p class="text-[11px] font-mono text-neutral-400 mb-3">linkedin-hook-extractor</p>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                Analyzes top-performing industry posts to identify opening sentences that stop the scroll.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GROUP 2: CONTENT CREATION & HUMANIZING -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#171717]"></span>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-[#171717]">2. Content Creation &amp; Humanizing</h3>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          
+          <!-- Agent 4: Content Planner -->
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 hover:border-[#171717] transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-neutral-600">agent-04</span>
+                <span class="text-xs text-neutral-400">30d Matrix</span>
+              </div>
+              <h4 class="text-base font-bold text-[#171717] mb-1">Content Planner</h4>
+              <p class="text-[11px] font-mono text-neutral-400 mb-3">linkedin-content-planner</p>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                Structures a 30-day strategic publishing calendar mapped to your business goals.
+              </p>
+            </div>
+          </div>
+
+          <!-- Agent 5: Post Writer -->
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 hover:border-[#171717] transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-neutral-600">agent-05</span>
+                <span class="text-xs text-neutral-400">Ghostwriter</span>
+              </div>
+              <h4 class="text-base font-bold text-[#171717] mb-1">Post Writer</h4>
+              <p class="text-[11px] font-mono text-neutral-400 mb-3">linkedin-post-writer</p>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                Turns raw thoughts into structured thought-leadership articles and stories.
+              </p>
+            </div>
+          </div>
+
+          <!-- Agent 6: Tone Humanizer -->
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 hover:border-[#171717] transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-neutral-600">agent-06</span>
+                <span class="text-xs text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">0% AI Fluff</span>
+              </div>
+              <h4 class="text-base font-bold text-[#171717] mb-1">Tone Humanizer</h4>
+              <p class="text-[11px] font-mono text-neutral-400 mb-3">linkedin-humanizer</p>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                Strips out all generic "AI sounding" corporate fluff so every line sounds 100% human and authentic.
+              </p>
+            </div>
+          </div>
+
+          <!-- Agent 7: Content Repurposer -->
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 hover:border-[#171717] transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-neutral-600">agent-07</span>
+                <span class="text-xs text-neutral-400">Multimedia</span>
+              </div>
+              <h4 class="text-base font-bold text-[#171717] mb-1">Content Repurposer</h4>
+              <p class="text-[11px] font-mono text-neutral-400 mb-3">linkedin-repurposer</p>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                Converts your podcasts, YouTube videos, and newsletters into carousel slides and punchy text posts.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GROUP 3: INTERACTION & CONVERSATION -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#171717]"></span>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-[#171717]">3. Interaction &amp; Conversation</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          
+          <!-- Agent 8: Thread Monitor -->
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 hover:border-[#171717] transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-neutral-600">agent-08</span>
+                <span class="text-xs text-neutral-400">Radar</span>
+              </div>
+              <h4 class="text-base font-bold text-[#171717] mb-1">Thread Monitor</h4>
+              <p class="text-[11px] font-mono text-neutral-400 mb-3">linkedin-thread-monitor</p>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                Tracks high-profile conversations in your industry the minute they start trending.
+              </p>
+            </div>
+          </div>
+
+          <!-- Agent 9: Comment Drafter -->
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 hover:border-[#171717] transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-neutral-600">agent-09</span>
+                <span class="text-xs text-neutral-400">Thoughtful</span>
+              </div>
+              <h4 class="text-base font-bold text-[#171717] mb-1">Comment Drafter</h4>
+              <p class="text-[11px] font-mono text-neutral-400 mb-3">linkedin-comment-drafter</p>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                Prepares insightful, value-packed comments on prospective client posts to build relationships.
+              </p>
+            </div>
+          </div>
+
+          <!-- Agent 10: Reply Handler -->
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 hover:border-[#171717] transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-neutral-600">agent-10</span>
+                <span class="text-xs text-neutral-400">Inbox Care</span>
+              </div>
+              <h4 class="text-base font-bold text-[#171717] mb-1">Reply Handler</h4>
+              <p class="text-[11px] font-mono text-neutral-400 mb-3">linkedin-reply-handler</p>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                Drafts personalized responses to inbound comments and connection requests.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GROUP 4: AMPLIFICATION & INTELLIGENCE -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-[#171717]"></span>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-[#171717]">4. Amplification &amp; Intelligence</h3>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          
+          <!-- Agent 11: Employee Advocacy Hub -->
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 hover:border-[#171717] transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-neutral-600">agent-11</span>
+                <span class="text-xs text-neutral-400">Team Network</span>
+              </div>
+              <h4 class="text-base font-bold text-[#171717] mb-1">Employee Advocacy Hub</h4>
+              <p class="text-[11px] font-mono text-neutral-400 mb-3">linkedin-employee-advocacy</p>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                Packages approved posts for your team to share with 1 click to multiply reach.
+              </p>
+            </div>
+          </div>
+
+          <!-- Agent 12: Engager Analytics -->
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 hover:border-[#171717] transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#FAFAFA] border border-[#E5E5E5] text-neutral-600">agent-12</span>
+                <span class="text-xs text-neutral-400">Buyer Intent</span>
+              </div>
+              <h4 class="text-base font-bold text-[#171717] mb-1">Engager Analytics</h4>
+              <p class="text-[11px] font-mono text-neutral-400 mb-3">linkedin-engager-analytics</p>
+              <p class="text-xs text-neutral-600 leading-relaxed">
+                Identifies which companies and decision-makers are viewing and reacting to your content.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 5. INTERACTIVE SANDBOX / TEST DRIVE (No Code / No JSON) -->
+    <section class="bg-[#FFFFFF] border border-[#E5E5E5] rounded-2xl p-6 sm:p-8 shadow-sm">
+      <div class="max-w-xl mb-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-neutral-400">Interactive Sandbox</span>
+        <h2 class="text-2xl font-bold text-[#171717] mt-0.5">Test Live Fleet Workflows</h2>
+        <p class="text-neutral-500 text-sm mt-1.5 leading-relaxed">
+          Select an operational scenario to watch how our agent modules coordinate from raw idea to published executive asset.
+        </p>
+      </div>
+
+      <!-- 3 Workflow Selector Buttons -->
+      <div class="flex flex-wrap gap-2.5 mb-8">
+        <button 
+          id="btn-wf-voice" 
+          onclick="selectWorkflow('voice')"
+          class="wf-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#171717] text-white border-[#171717]"
+        >
+          1. Voice Interview → Humanized Post
+        </button>
+
+        <button 
+          id="btn-wf-podcast" 
+          onclick="selectWorkflow('podcast')"
+          class="wf-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#FFFFFF] text-[#171717] border-[#E5E5E5] hover:border-[#171717]"
+        >
+          2. Podcast Repurposing → Carousel &amp; Post
+        </button>
+
+        <button 
+          id="btn-wf-thread" 
+          onclick="selectWorkflow('thread')"
+          class="wf-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#FFFFFF] text-[#171717] border-[#E5E5E5] hover:border-[#171717]"
+        >
+          3. Thread Monitor → Value Comment
+        </button>
+      </div>
+
+      <!-- Live Execution Pipeline Trace -->
+      <div class="bg-[#FAFAFA] border border-[#E5E5E5] rounded-xl p-4 sm:p-5 mb-6">
+        <div class="flex items-center justify-between pb-3 border-b border-[#E5E5E5] mb-3">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-500">Autonomous Workflow Trace</span>
+          <span id="trace-status" class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+            ✓ 0% AI Fluff Detected
+          </span>
+        </div>
+        <div id="trace-steps" class="flex flex-wrap items-center gap-2 text-xs font-mono text-neutral-600">
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Voice Interviewer</span>
+          <span>→</span>
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Hook Extractor</span>
+          <span>→</span>
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Post Writer</span>
+          <span>→</span>
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Tone Humanizer</span>
+        </div>
+      </div>
+
+      <!-- Social Post / Comment Output Preview Card -->
+      <div class="bg-[#FAFAFA] border border-[#E5E5E5] rounded-xl p-6 space-y-4">
+        
+        <!-- Post Header -->
+        <div class="flex items-center justify-between pb-3 border-b border-[#E5E5E5]">
+          <div class="flex items-center gap-3">
+            <div id="preview-avatar" class="w-11 h-11 rounded-full bg-neutral-900 text-white flex items-center justify-center font-bold text-xs tracking-wider border border-neutral-700">
+              SL
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <h4 id="preview-author-name" class="text-sm font-bold text-[#171717]">Sarah Lin</h4>
+                <span class="text-xs text-neutral-400">• 1st</span>
+              </div>
+              <p id="preview-author-role" class="text-xs text-neutral-500">Founder &amp; CEO at Meridian Cloud • Scaling B2B Fintech Systems</p>
+              <div class="flex items-center gap-1 text-[11px] text-neutral-400 mt-0.5">
+                <span>35m •</span>
+                <span>🌐 Public</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span id="preview-score-badge" class="hidden sm:inline-flex text-[11px] font-bold px-2.5 py-1 rounded-full bg-white border border-[#E5E5E5] text-[#171717]">
+              96 / 100 Human Resonance
+            </span>
+            <button 
+              id="copy-asset-btn" 
+              onclick="copyAsset()" 
+              class="px-3.5 py-1.5 rounded-lg border border-[#E5E5E5] bg-white hover:bg-neutral-100 text-xs font-semibold text-[#171717] transition-colors flex items-center gap-1.5"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+              </svg>
+              <span id="copy-asset-btn-text">Copy to Clipboard</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Optional In-Context Post Wrapper (Used for comment replies) -->
+        <div id="thread-context-box" class="hidden bg-white border border-[#E5E5E5] rounded-lg p-3 text-xs text-neutral-500 italic">
+          Target Post by Julian Vance (CTO at Enterprise Logistics): "Debating whether to migrate our legacy data warehouse to Snowflake or Databricks this quarter. Anyone have hard battle scars from either?"
+        </div>
+
+        <!-- Formatted Post Content -->
+        <div class="bg-white border border-[#E5E5E5] rounded-xl p-5">
+          <div id="preview-post-body" class="text-sm text-[#171717] leading-relaxed whitespace-pre-line font-normal space-y-3">
+I spent 4 years believing that lowering our prices would make it easier to close deals.
+
+It did the exact opposite.
+
+When we charged $2,500/month, prospects questioned every deliverable. They asked for daily status calls. They treated our engineering team like commodity freelancers.
+
+Last year, we raised our minimum retainer to $12,000/month:
+
+• Sales cycles shortened from 6 weeks to 11 days.
+• Client churn dropped to near zero.
+• Inbound referrals tripled.
+
+High-tier buyers don't want a discount. They want the confidence that you are capable of solving a mission-critical problem without handholding.
+
+If your pipeline feels like an endless price war, the problem usually isn't your offer. It's your price tag.
+          </div>
+
+          <!-- Carousel Outline Card preview (if podcast workflow active) -->
+          <div id="carousel-attachment-box" class="hidden mt-4 pt-4 border-t border-[#E5E5E5]">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-neutral-400 block mb-2">Attached Slide Deck:</span>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+              <div class="p-2.5 rounded bg-[#FAFAFA] border border-[#E5E5E5]">
+                <span class="font-bold block text-[#171717]">Slide 1</span>
+                <span class="text-neutral-500">Why hiring a VP too early burns 6 months runway</span>
+              </div>
+              <div class="p-2.5 rounded bg-[#FAFAFA] border border-[#E5E5E5]">
+                <span class="font-bold block text-[#171717]">Slide 2</span>
+                <span class="text-neutral-500">The 5 questions the founder must personally ask</span>
+              </div>
+              <div class="p-2.5 rounded bg-[#FAFAFA] border border-[#E5E5E5]">
+                <span class="font-bold block text-[#171717]">Slide 3</span>
+                <span class="text-neutral-500">The metric that greenlights your first sales hire</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Engagement Bar -->
+        <div class="flex items-center justify-between pt-2 px-1 text-xs text-neutral-400">
+          <div class="flex items-center gap-1.5">
+            <span class="inline-flex -space-x-1 overflow-hidden">
+              <span class="inline-block w-4 h-4 rounded-full bg-blue-600 text-[10px] text-white text-center leading-4">👍</span>
+              <span class="inline-block w-4 h-4 rounded-full bg-red-500 text-[10px] text-white text-center leading-4">❤️</span>
+              <span class="inline-block w-4 h-4 rounded-full bg-emerald-600 text-[10px] text-white text-center leading-4">💡</span>
+            </span>
+            <span id="preview-stats-likes" class="text-neutral-500 font-medium">482 reactions</span>
+          </div>
+          <div class="flex items-center gap-3 text-neutral-500">
+            <span id="preview-stats-comments">64 comments</span>
+            <span>•</span>
+            <span id="preview-stats-reposts">28 reposts</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-[#E5E5E5] bg-[#FFFFFF] py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-3">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-[#171717]">Autonomous LinkedIn Growth Fleet</span>
+        <span>•</span>
+        <span>AI Automation Studio</span>
+      </div>
+      <div>
+        <span>Enterprise 12-Agent Ecosystem Architecture</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT FOR WORKFLOW TEST DRIVE -->
+  <script>
+    const workflows = {
+      voice: {
+        traceBadge: "✓ 0% AI Fluff Detected",
+        traceHTML: `
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Voice Interviewer</span>
+          <span>→</span>
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Hook Extractor</span>
+          <span>→</span>
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Post Writer</span>
+          <span>→</span>
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Tone Humanizer</span>
+        `,
+        avatar: "SL",
+        authorName: "Sarah Lin",
+        authorRole: "Founder & CEO at Meridian Cloud • Scaling B2B Fintech Systems",
+        scoreBadge: "96 / 100 Human Resonance",
+        showContext: false,
+        showCarousel: false,
+        body: `I spent 4 years believing that lowering our prices would make it easier to close deals.\n\nIt did the exact opposite.\n\nWhen we charged $2,500/month, prospects questioned every deliverable. They asked for daily status calls. They treated our engineering team like commodity freelancers.\n\nLast year, we raised our minimum retainer to $12,000/month:\n\n• Sales cycles shortened from 6 weeks to 11 days.\n• Client churn dropped to near zero.\n• Inbound referrals tripled.\n\nHigh-tier buyers don't want a discount. They want the confidence that you are capable of solving a mission-critical problem without handholding.\n\nIf your pipeline feels like an endless price war, the problem usually isn't your offer. It's your price tag.`,
+        likes: "482 reactions",
+        comments: "64 comments",
+        reposts: "28 reposts"
+      },
+      podcast: {
+        traceBadge: "✓ Multi-Format Slide Decomposition",
+        traceHTML: `
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Content Repurposer (Transcribe)</span>
+          <span>→</span>
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Hook Extractor</span>
+          <span>→</span>
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Content Planner</span>
+          <span>→</span>
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Tone Humanizer</span>
+        `,
+        avatar: "DS",
+        authorName: "David Sterling",
+        authorRole: "Managing Partner at Horizon Ventures • Advisor to 40+ Founders",
+        scoreBadge: "94 / 100 Engagement Potential",
+        showContext: false,
+        showCarousel: true,
+        body: `Most early-stage founders obsess over hiring their first VP of Sales.\n\nAfter backing 40+ B2B startups, here is the uncomfortable truth I shared on the podcast this week:\n\nIf the founder hasn't personally closed the first 10 customers, no sales leader can save you.\n\nHere is the 4-phase founder-led sales blueprint (Slide breakdown below):\n\nSlide 1: Why hiring a VP too early burns 6 months of runway.\nSlide 2: The exact 5 qualifying questions the founder must ask.\nSlide 3: When to introduce pricing (hint: never on call #1).\nSlide 4: The trigger signal that tells you it's finally time to hire.\n\nFull 6-slide visual breakdown attached. Save this post for your next quarterly board deck.`,
+        likes: "620 reactions",
+        comments: "88 comments",
+        reposts: "42 reposts"
+      },
+      thread: {
+        traceBadge: "✓ High-Authority Peer Perspective",
+        traceHTML: `
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Thread Monitor (Radar)</span>
+          <span>→</span>
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Engager Analytics (ICP Fit)</span>
+          <span>→</span>
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Comment Drafter</span>
+          <span>→</span>
+          <span class="px-2 py-1 bg-white rounded border border-[#E5E5E5] text-[#171717] font-semibold">Tone Humanizer</span>
+        `,
+        avatar: "SL",
+        authorName: "Sarah Lin (Automated Insight Drafter)",
+        authorRole: "Founder & CEO at Meridian Cloud • Verified Peer Contribution",
+        scoreBadge: "98 / 100 Conversational Authority",
+        showContext: true,
+        showCarousel: false,
+        body: `"We ran a side-by-side migration benchmark for a 4TB streaming warehouse last year, Julian.\n\nThe unexpected variable wasn't query speed—both handle standard SQL transformations brilliantly. The real difference was team operational overhead: Snowflake took our data team roughly 2 days to set up compute auto-scaling, whereas Databricks required noticeably more cluster management tuning (though gave deeper cost control on heavy ML training jobs).\n\nIf your workload is 80%+ SQL reporting, Snowflake will save your engineers hours of infrastructure upkeep. Happy to share our raw benchmark checklist if it helps your team evaluate!"`,
+        likes: "148 helpful votes",
+        comments: "Author Replied",
+        reposts: "12 profile views driven"
+      }
+    };
+
+    function selectWorkflow(key) {
+      const data = workflows[key];
+      if (!data) return;
+
+      // Update button styles
+      const buttons = {
+        voice: document.getElementById('btn-wf-voice'),
+        podcast: document.getElementById('btn-wf-podcast'),
+        thread: document.getElementById('btn-wf-thread'),
+      };
+
+      Object.keys(buttons).forEach(k => {
+        if (k === key) {
+          buttons[k].className = "wf-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#171717] text-white border-[#171717]";
+        } else {
+          buttons[k].className = "wf-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold border transition-all duration-200 bg-[#FFFFFF] text-[#171717] border-[#E5E5E5] hover:border-[#171717]";
+        }
+      });
+
+      // Update Trace Pipeline
+      document.getElementById('trace-status').textContent = data.traceBadge;
+      document.getElementById('trace-steps').innerHTML = data.traceHTML;
+
+      // Update Post Preview
+      document.getElementById('preview-avatar').textContent = data.avatar;
+      document.getElementById('preview-author-name').textContent = data.authorName;
+      document.getElementById('preview-author-role').textContent = data.authorRole;
+      document.getElementById('preview-score-badge').textContent = data.scoreBadge;
+      document.getElementById('preview-post-body').textContent = data.body;
+      document.getElementById('preview-stats-likes').textContent = data.likes;
+      document.getElementById('preview-stats-comments').textContent = data.comments;
+      document.getElementById('preview-stats-reposts').textContent = data.reposts;
+
+      // Show/Hide context and carousel attachments
+      const contextBox = document.getElementById('thread-context-box');
+      if (data.showContext) {
+        contextBox.classList.remove('hidden');
+      } else {
+        contextBox.classList.add('hidden');
+      }
+
+      const carouselBox = document.getElementById('carousel-attachment-box');
+      if (data.showCarousel) {
+        carouselBox.classList.remove('hidden');
+      } else {
+        carouselBox.classList.add('hidden');
+      }
+
+      // Reset copy button
+      document.getElementById('copy-asset-btn-text').textContent = "Copy to Clipboard";
+    }
+
+    function copyAsset() {
+      const textToCopy = document.getElementById('preview-post-body').textContent.trim();
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        const btnText = document.getElementById('copy-asset-btn-text');
+        btnText.textContent = "✓ Copied!";
+        setTimeout(() => {
+          btnText.textContent = "Copy to Clipboard";
+        }, 2200);
+      }).catch(err => {
+        console.error('Copy failed:', err);
+      });
+    }
+  </script>
+
+</body>
+</html>

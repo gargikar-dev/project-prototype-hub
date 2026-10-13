@@ -1,0 +1,5 @@
+{
+  "site:linkedin.com/in/ (\"Founder\" OR \"Managing Principal\" OR \"Owner\") AND (\"Commercial Architecture\" OR \"Commercial Interiors\") AND (\"United States\" OR \"United Kingdom\")": [],
+  "site:linkedin.com/in/ (\"President\" OR \"Owner\") AND (\"Commercial Roofing\" OR \"Facility Services\") AND (\"United States\")": [],
+  "site:linkedin.com/in/ (\"Founder\" OR \"Managing Director\") AND (\"Freight Brokerage\" OR \"3PL Logistics\") AND (\"United States\" OR \"UK\")": []
+}
