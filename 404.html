@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Redirecting — AI Automation Studio</title>
+  <script>
+    // GitHub Pages SPA / Case-insensitivity router fallback
+    const path = window.location.pathname;
+    if (path.includes('/projects/')) {
+      window.location.replace(path.replace('/projects/', '/Projects/'));
+    } else {
+      window.location.replace('./index.html');
+    }
+  </script>
+</head>
+<body style="font-family: sans-serif; padding: 40px; text-align: center;">
+  <h2>Redirecting...</h2>
+  <p>If you are not redirected automatically, <a href="index.html">click here to return to the Studio Hub</a>.</p>
+</body>
+</html>

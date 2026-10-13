@@ -4,16 +4,18 @@ A minimal, high-contrast black-and-white directory of production-grade AI automa
 
 Built with **Tailwind CSS**, **Plus Jakarta Sans**, and responsive vector micro-animations.
 
+👉 **Live Interactive Site**: [https://gargikar-dev.github.io/project-prototype-hub/](https://gargikar-dev.github.io/project-prototype-hub/)
+
 ---
 
 ## 🚀 Live Working Prototypes
 
 | Module | Route | Highlights |
 | :--- | :--- | :--- |
-| **Reddit Client Finder** | [`projects/reddit-scout.html`](projects/reddit-scout.html) | Inbound intent detection, automated lead scoring, and consultative reply drafting across active subreddits. |
-| **Autonomous LinkedIn Growth Fleet** | [`projects/linkedin-manager.html`](projects/linkedin-manager.html) | 12-agent operations suite covering voice interviews, hook extraction, tone humanizing, and executive outbound. |
-| **Instagram Strategy & Positioning Studio** | [`projects/instagram-studio.html`](projects/instagram-studio.html) | 7 strategic intelligence engines decoding competitor whitespace, 4 content pillars, and 30-day multimodal calendars. |
-| **Real Estate Lead Matcher** | [`projects/real-estate.html`](projects/real-estate.html) | Deal sourcing pipeline matching off-market listings with verified cash buyers and pre-approved capital. |
+| **Reddit Client Finder** | [`Projects/reddit-scout.html`](Projects/reddit-scout.html) | Inbound intent detection, automated lead scoring, and consultative reply drafting across active subreddits. |
+| **Autonomous LinkedIn Growth Fleet** | [`Projects/linkedin-manager.html`](Projects/linkedin-manager.html) | 12-agent operations suite covering voice interviews, hook extraction, tone humanizing, and executive outbound. |
+| **Instagram Strategy & Positioning Studio** | [`Projects/instagram-studio.html`](Projects/instagram-studio.html) | 7 strategic intelligence engines decoding competitor whitespace, 4 content pillars, and 30-day multimodal calendars. |
+| **Real Estate Lead Matcher** | [`Projects/real-estate.html`](Projects/real-estate.html) | Deal sourcing pipeline matching off-market listings with verified cash buyers and pre-approved capital. |
 
 ---
 
